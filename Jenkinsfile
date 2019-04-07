@@ -12,15 +12,15 @@ pipeline {
         
         stage('Test') {
             steps {
-                sh '/var/jenkins_home/maven/apache-maven-3.6.0/bin/mvn -version'
-                echo "OK Mvn version"
+                sh '/var/jenkins_home/maven/apache-maven-3.6.0/bin/mvn test'
+                echo "Test Complete"
             }
-            /*
+           
             post {
                 always {
                     junit 'target/surefire-reports/*.xml'
                 }
-            }*/
+            }
         }
         /*
         stage('Deliver') {
