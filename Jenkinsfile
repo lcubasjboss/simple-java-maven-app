@@ -10,7 +10,7 @@ pipeline {
         
         stage('Test') {
             steps {
-                sh '/maven/apache-maven-3.6.0/bin/mvn -version'
+                sh '/var/jenkins_home/maven/apache-maven-3.6.0/bin/mvn -version'
                 echo "OK Mvn version"
             }
             /*
