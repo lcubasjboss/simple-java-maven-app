@@ -6,7 +6,7 @@ pipeline {
                 checkout scm
                 echo "OK Checkout"
                 sh '/var/jenkins_home/maven/apache-maven-3.6.0/bin/mvn -B -DskipTests clean package' 
-                sh 'mvn -Dmaven.test.failure.ignore=true install'
+                sh '/var/jenkins_home/maven/apache-maven-3.6.0/bin/mvn -Dmaven.test.failure.ignore=true install'
             }
         }
         
