@@ -3,13 +3,14 @@ pipeline {
         stage('Build') {
             steps {            
                 checkout scm
-                echo "OK"
+                echo "OK Checkout"
             }
         }
         
         stage('Test') {
             steps {
                 sh 'mvn --version'
+                echo "OK Mvn version"
             }
             /*
             post {
