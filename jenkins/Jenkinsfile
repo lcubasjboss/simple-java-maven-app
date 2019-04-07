@@ -6,17 +6,18 @@ pipeline {
                 echo "OK"
             }
         }
-        /*
+        
         stage('Test') {
             steps {
-                sh 'mvn test'
+                sh 'mvn --version'
             }
+            /*
             post {
                 always {
                     junit 'target/surefire-reports/*.xml'
                 }
-            }
-        }*/
+            }*/
+        }
         /*
         stage('Deliver') {
             steps {
